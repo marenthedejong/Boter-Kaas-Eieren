@@ -1,5 +1,5 @@
-from _ml import MLAgent, train, save, load, train_and_plot
-from _core import is_winner, opponent, start
+from _ml import MLAgent, train, save, load, train_and_plot, RandomAgent, validate, plot_validation
+from _core import is_winner, opponent, start 
 
 
  
@@ -24,7 +24,13 @@ save(my_agent, 'MyAgent_3000')
 my_agent = load('MyAgent_3000')
  
 my_agent.learning = False
+	 
+
+validation_agent = RandomAgent()
+ 
+validation_result = validate(agent_x=my_agent, agent_o=validation_agent, iterations=100)
+ 
+plot_validation(validation_result)
  
 start(player_x=my_agent)
 
-start()
