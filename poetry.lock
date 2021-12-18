@@ -1,33 +1,37 @@
 [[package]]
-category = "main"
-description = "For serializing Python objects to JSON (dicts) and back"
 name = "jsons"
+version = "1.6.0"
+description = "For serializing Python objects to JSON (dicts) and back"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.3.0"
 
 [package.dependencies]
-typish = ">=1.9.1"
+typish = ">=1.9.2"
+
+[package.extras]
+test = ["attrs", "coverage", "codecov", "pytest", "scons", "dataclasses", "tzdata"]
 
 [[package]]
-category = "main"
-description = "Functionality for types"
 name = "typish"
+version = "1.9.3"
+description = "Functionality for types"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.9.1"
 
 [package.extras]
 test = ["numpy", "nptyping (>=1.3.0)", "pycodestyle", "pylint", "mypy", "pytest", "coverage", "codecov"]
 
 [metadata]
-content-hash = "6d037b5f18286d1aedd47a76d9b1d64100b12a517f33b60422e8298596f42ce8"
+lock-version = "1.1"
 python-versions = "^3.8"
+content-hash = "6d037b5f18286d1aedd47a76d9b1d64100b12a517f33b60422e8298596f42ce8"
 
 [metadata.files]
 jsons = [
-    {file = "jsons-1.3.0-py3-none-any.whl", hash = "sha256:e69a4f23e20d07d76739dcd8072b70cd99a1b99d11f11c10abee9810230c4c20"},
+    {file = "jsons-1.6.0-py3-none-any.whl", hash = "sha256:493643e28dcb3432aac72b79b1962eb955dfc7807bb7ea76e435efc99e9c4beb"},
 ]
 typish = [
-    {file = "typish-1.9.1-py3-none-any.whl", hash = "sha256:017095ef9a3570c6ec334497eb2e03bad4e61873e50c41fe59e3c73b24090359"},
+    {file = "typish-1.9.3-py3-none-any.whl", hash = "sha256:03cfee5e6eb856dbf90244e18f4e4c41044c8790d5779f4e775f63f982e2f896"},
 ]
