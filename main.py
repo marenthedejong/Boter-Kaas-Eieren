@@ -25,9 +25,9 @@ random_agent = RandomAgent()
 train_and_plot(
 	 agent=my_agent,
 	 validation_agent=random_agent,
-	 iterations=50,
-	 trainings=100,
-	 validations=1000)
+	 iterations=20,
+	 trainings=150,
+	 validations=1500)
 
 
 train(my_agent, 3000)
