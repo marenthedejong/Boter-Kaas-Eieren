@@ -1,9 +1,7 @@
 from _ml import MLAgent, train, save, load, train_and_plot, RandomAgent, validate, plot_validation
+
 from _core import is_winner, opponent, start
 import random
-
-
- 
  
 class MyAgent(MLAgent):
     def evaluate(self, board):
@@ -35,7 +33,6 @@ train_and_plot(
 	 trainings=200,
 	 validations=1500)
 
-
 train(my_agent, 3000)
  
 save(my_agent, 'MyAgent_3000')
@@ -45,10 +42,22 @@ my_agent = load('MyAgent_3000')
 my_agent.learning = True
 
 validation_agent = RandomAgent()
- 
+
 validation_result = validate(agent_x=my_agent, agent_o=validation_agent, iterations=200)
 
-plot_validation(validation_result)
  
-start(player_x=my_agent)
+while True:
+  keuze = input("Kies 1 voor een potje met twee echte spelers, kies 2 voor een potje tegen een AI! Kies 3 voor een grafiek van de agent!")
+
+  if keuze == '1':
+    start()
+
+  if keuze == '2':
+    my_agent = load('MyAgent_3000'); 
+    start(player_x=my_agent); 
+
+  if keuze == '3':
+    plot_validation(validation_result)
+    
+
 
