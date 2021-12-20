@@ -47,16 +47,18 @@ validation_result = validate(agent_x=my_agent, agent_o=validation_agent, iterati
 
  
 while True:
-  keuze = input("Kies 1 voor een potje met twee echte spelers, kies 2 voor een potje tegen een AI! Kies 3 voor een grafiek van de agent!")
+  keuze = input("Kies 1 voor een potje met twee echte spelers, kies 2 voor een potje tegen een AI! Kies 3 voor een grafiek die laat zien hoe vaak de agent wint!")
 
   if keuze == '1':
     start()
 
   if keuze == '2':
+    print('De agent zal altijd X zijn, jij bent dus O!')
     my_agent = load('MyAgent_3000'); 
     start(player_x=my_agent); 
 
   if keuze == '3':
+    print("Klik na afloop de grafiek weg om weer verder te spelen!")
     plot_validation(validation_result)
     
 
